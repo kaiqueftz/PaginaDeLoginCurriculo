@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div id="login">
+        <form class="card" onsubmit="return validateLogin()">
+            <div class="card-header">
+                <h2>Login</h2>
+            </div>
+            <div class="card-content">
+                <div class="card-content-area">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" id="usuario" autocomplete="off" required>
+                </div>
+                <div class="card-content-area">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" autocomplete="off" required>
+                </div>
+            </div>
+            <div class="card-footer">
+                <input type="submit" value="Entrar" class="submit">
+                <a href="#" class="recuperar_senha">Esqueceu a senha?</a>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        function validateLogin() {
+            var usuario = document.getElementById("usuario").value;
+            var password = document.getElementById("password").value;
+
+            // Verifique as credenciais
+            if (usuario === "kaiqueftz" && password === "Klma0306@") {
+                // Credenciais válidas, redirecione para a página desejada
+                window.location.href = "https://kaiqueftz.github.io/MeuCurriculo.com.br/";
+                return false; // Evita o envio do formulário
+            } else {
+                // Credenciais inválidas, exiba uma mensagem de erro ou tome alguma outra ação
+                alert("Credenciais inválidas. Por favor, verifique seu usuário e senha.");
+                return false; // Evita o envio do formulário
+            }
+        }
+    </script>
+</body>
+</html>
